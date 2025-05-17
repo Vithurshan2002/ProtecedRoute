@@ -1,9 +1,23 @@
-import React from 'react'
+
+import { useDispatch } from "react-redux";
+import {  setuser } from "../slices/useSlice";
 
 const Login = () => {
-  return (
-    <div>Login</div>
-  )
-}
+  const dispath = useDispatch();
+  const data = {
+    //databsekla user loginpanniu atha databasela check panni corevta irutha athu orudatava anupum  ATHU THAN ITHU ENA KOLLAKA
+    name: "vithurshan",
+    password:'12345',
+  };
+  const Login = () => {
+    if (data) {
+      dispath(setuser(data));
+      console.log('loginda')
+    }
+  };
+ 
 
-export default Login
+  return <div onClick={ Login}>Login</div>;
+};
+
+export default Login;
