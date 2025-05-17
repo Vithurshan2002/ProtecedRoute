@@ -4,6 +4,7 @@ import Login from "./Components/Login"
 import Nav from "./Components/Nav";
 import Setting from "./Components/Setting"
 import{BrowserRouter,Routes,Route}from 'react-router-dom';
+
 function App() {
   return (
     <>
